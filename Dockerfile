@@ -1,0 +1,11 @@
+FROM python:3.14-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+COPY main.py .
+COPY src ./src
+
+ENTRYPOINT ["python", "main.py"]

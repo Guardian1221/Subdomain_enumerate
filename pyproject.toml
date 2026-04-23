@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "subdomain-enumerator-cli"
+version = "0.1.0"
+description = "CLI утилита для поиска поддоменов и их IP-адресов"
+readme = "README.md"
+requires-python = ">=3.14"
+authors = [{ name = "abdulatip" }]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.0",
+    "ruff>=0.15.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+exclude = [".venv", ".pytest_cache", ".ruff_cache"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
