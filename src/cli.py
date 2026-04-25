@@ -6,10 +6,10 @@ from src.core import DOMAIN_PREFIXES, result_collection
 
 def build_parser() -> argparse.ArgumentParser:
     """
-    Builds an argument parser for the CLI.
+    Создает парсер аргументов
 
-    Returns:
-        argparse.ArgumentParser: The argument parser.
+    Возвращает:
+        argparse.ArgumentParser: парсер.
     """
     parser = argparse.ArgumentParser(description="Subdomain enumerates.")
     parser.add_argument("domain", type=str, help="Строка-домен")
